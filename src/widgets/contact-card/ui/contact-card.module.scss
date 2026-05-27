@@ -1,0 +1,14 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.card {
+  border-color: $color-border-contact-card;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+}
+
+@include media-sm {
+  .card {
+    padding: $spacing-2xl;
+  }
+}
