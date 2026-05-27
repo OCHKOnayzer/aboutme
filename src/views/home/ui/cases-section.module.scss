@@ -1,0 +1,96 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.container {
+  padding-top: $section-padding-y;
+  padding-bottom: $section-padding-y;
+}
+
+.heading {
+  max-width: 768px;
+  margin-bottom: $layout-gap;
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+}
+
+.card {
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-semibold;
+}
+
+.role {
+  margin: $spacing-xs 0 0;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.period {
+  color: $color-text-soft;
+  font-size: $font-size-sm;
+}
+
+.description {
+  margin: $spacing-md 0 0;
+  color: $color-text-muted;
+  line-height: $line-height-relaxed;
+}
+
+.footer {
+  margin-top: $spacing-3xl;
+  border-top: 1px solid $color-border-soft;
+  padding-top: $spacing-lg;
+  color: $color-text-footer;
+  font-size: $font-size-sm;
+  line-height: 1.5;
+}
+
+.stack {
+  margin: 0;
+}
+
+.link {
+  display: inline-flex;
+  margin-top: $spacing-sm;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+}
+
+@include media-sm {
+  .header {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .period {
+    max-width: 144px;
+    text-align: right;
+  }
+}
+
+@include media-lg {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

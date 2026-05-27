@@ -1,0 +1,98 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.section {
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  background: $color-surface;
+}
+
+.container {
+  display: grid;
+  gap: $spacing-3xl;
+  padding-top: $section-padding-y-compact;
+  padding-bottom: $section-padding-y-compact;
+}
+
+.heading {
+  max-width: 620px;
+
+  h2 {
+    margin-top: $spacing-sm;
+  }
+
+  h2 + p {
+    margin-top: $spacing-sm;
+    line-height: 1.6;
+  }
+}
+
+.content {
+  display: grid;
+  gap: $spacing-xl;
+}
+
+.steps {
+  display: grid;
+  gap: $spacing-md;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: start;
+  gap: $spacing-md;
+  border: 1px solid $color-border-muted;
+  background: $color-surface-muted;
+  padding: $spacing-lg;
+}
+
+.stepNumber {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: $color-primary-soft;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+}
+
+.stepText,
+.aiItem {
+  margin: 0;
+  color: $color-text-body;
+  line-height: $line-height-relaxed;
+}
+
+.aiBlock {
+  border: 1px solid $color-border-ai;
+  background: $color-surface-accent;
+  padding: $spacing-xl;
+}
+
+.aiTitle {
+  margin: 0;
+  color: $color-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.aiList {
+  display: grid;
+  gap: $spacing-sm;
+  margin: $spacing-md 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@include media-lg {
+  .container {
+    grid-template-columns: minmax(300px, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+  }
+}

@@ -1,0 +1,183 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.section {
+  border-bottom: 1px solid $color-border;
+  background: $color-background;
+}
+
+.inner {
+  display: grid;
+  min-height: 92vh;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: $hero-gap;
+  padding: $spacing-3xl $spacing-lg;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0 0 $spacing-lg;
+  border: 1px solid $color-border-chip;
+  background: $color-surface;
+  padding: $spacing-xxs $spacing-sm;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.title {
+  max-width: 896px;
+  margin: 0;
+  color: $color-text-strong;
+  font-size: 48px;
+  font-weight: $font-weight-semibold;
+  line-height: 1.02;
+}
+
+.description {
+  max-width: 672px;
+  margin: $spacing-2xl 0 0;
+  color: $color-text-muted;
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-top: $spacing-4xl;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  height: $control-height;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $spacing-xl;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+
+  @include interactive-transition;
+}
+
+.primaryLink {
+  background: $color-primary;
+  color: $color-surface;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.secondaryLink {
+  border: 1px solid $color-border-link;
+  background: $color-surface;
+  color: $color-foreground;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+}
+
+.profileColumn {
+  display: grid;
+  align-content: end;
+  gap: $spacing-md;
+}
+
+.profileCard {
+  border-color: $color-border-profile-card;
+  box-shadow: $shadow-profile;
+}
+
+.profileHeader {
+  border-bottom: 1px solid $color-border-profile;
+  padding-bottom: $spacing-xl;
+}
+
+.profileEyebrow {
+  margin: 0;
+  color: $color-text-soft;
+  font-size: $font-size-sm;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.profileTitle {
+  margin: $spacing-sm 0 0;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-semibold;
+}
+
+.stats {
+  display: grid;
+  gap: $spacing-lg;
+  margin: 0;
+  padding: $spacing-xl 0;
+}
+
+.statLabel {
+  color: $color-text-soft;
+  font-size: $font-size-sm;
+}
+
+.statValue {
+  margin: $spacing-xxs 0 0;
+  font-weight: $font-weight-semibold;
+}
+
+.stack {
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.stackItem {
+  border: 1px solid $color-border-muted;
+  background: $color-surface-muted;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+@include media-sm {
+  .inner {
+    padding-right: $spacing-3xl;
+    padding-left: $spacing-3xl;
+  }
+
+  .title {
+    font-size: $font-size-hero-md;
+  }
+
+  .stats,
+  .stack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include media-lg {
+  .inner {
+    grid-template-columns: 1.08fr 0.92fr;
+    padding-right: $layout-gap;
+    padding-left: $layout-gap;
+  }
+
+  .title {
+    font-size: $font-size-hero-lg;
+  }
+}

@@ -1,0 +1,7 @@
+@use "@/shared/styles/tokens" as *;
+
+.main {
+  min-height: 100vh;
+  background: $color-background;
+  color: $color-foreground;
+}

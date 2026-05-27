@@ -1,0 +1,68 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid $color-border;
+  background: rgba(246, 247, 242, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+.inner {
+  display: flex;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-xl;
+  padding: $spacing-md $spacing-lg;
+}
+
+.brand {
+  color: $color-text-strong;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.025em;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: $spacing-xs $spacing-lg;
+  margin: 0;
+  padding: 0;
+  color: $color-text-body;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  list-style: none;
+}
+
+.link {
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+@include media-sm {
+  .inner {
+    padding-right: $spacing-3xl;
+    padding-left: $spacing-3xl;
+  }
+}
+
+@include media-lg {
+  .inner {
+    padding-right: $layout-gap;
+    padding-left: $layout-gap;
+  }
+}

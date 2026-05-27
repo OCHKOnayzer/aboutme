@@ -1,0 +1,40 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.section {
+  border-top: 1px solid $color-border;
+  background: $color-contact-bg;
+}
+
+.container {
+  display: grid;
+  gap: $layout-gap;
+  padding-top: $section-padding-y;
+  padding-bottom: $section-padding-y;
+}
+
+.heading {
+  max-width: 576px;
+}
+
+.links {
+  display: grid;
+  gap: $spacing-sm;
+  margin-top: $spacing-3xl;
+  color: $color-text-link;
+  font-size: $font-size-sm;
+}
+
+.link {
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+@include media-lg {
+  .container {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}

@@ -1,0 +1,36 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.container {
+  display: grid;
+  gap: $layout-gap;
+  padding-top: $section-padding-y;
+  padding-bottom: $section-padding-y;
+}
+
+.heading {
+  max-width: 768px;
+}
+
+.cards {
+  display: grid;
+  gap: $spacing-xl;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.cardText {
+  margin: $spacing-md 0 0;
+  color: $color-text-muted;
+  line-height: $line-height-relaxed;
+}
+
+@include media-lg {
+  .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
