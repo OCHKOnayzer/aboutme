@@ -1,0 +1,36 @@
+@use "@/shared/styles/tokens" as *;
+
+.field {
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.label {
+  color: $color-text-body;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+}
+
+.textarea {
+  min-height: $textarea-min-height;
+  resize: vertical;
+  border: 1px solid $color-border-input;
+  padding: $spacing-sm $spacing-md;
+  outline: none;
+  transition: border-color $transition-base;
+
+  &:focus {
+    border-color: $color-border-focus;
+  }
+
+  &[aria-invalid="true"] {
+    border-color: $color-border-error;
+  }
+}
+
+.error {
+  min-height: $field-error-height;
+  color: $color-error-text;
+  font-size: $font-size-sm;
+  line-height: $field-error-height;
+}

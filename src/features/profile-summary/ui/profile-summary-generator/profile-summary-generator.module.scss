@@ -1,0 +1,11 @@
+@use "@/shared/styles/tokens" as *;
+
+.generator {
+  margin-top: $spacing-lg;
+  border-top: 1px solid $color-border-soft;
+  padding-top: $spacing-lg;
+}
+
+.message {
+  margin-top: $spacing-lg;
+}
