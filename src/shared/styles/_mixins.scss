@@ -1,0 +1,35 @@
+@use "@/shared/styles/tokens" as *;
+
+@mixin media-sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin container-x-padding {
+  padding-right: $spacing-lg;
+  padding-left: $spacing-lg;
+
+  @include media-sm {
+    padding-right: $spacing-3xl;
+    padding-left: $spacing-3xl;
+  }
+
+  @include media-lg {
+    padding-right: $layout-gap;
+    padding-left: $layout-gap;
+  }
+}
+
+@mixin interactive-transition {
+  transition:
+    background-color $transition-base,
+    border-color $transition-base,
+    color $transition-base;
+}

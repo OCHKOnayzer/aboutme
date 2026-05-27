@@ -1,0 +1,28 @@
+@use "@/shared/styles/tokens" as *;
+
+.heading {
+  display: grid;
+  gap: 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: $spacing-md 0 0;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+}
+
+.description {
+  margin: $spacing-lg 0 0;
+  color: $color-text-muted;
+  line-height: $line-height-relaxed;
+}

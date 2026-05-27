@@ -1,0 +1,7 @@
+@use "@/shared/styles/tokens" as *;
+
+.card {
+  border: 1px solid $color-border;
+  background: $color-surface;
+  padding: $spacing-xl;
+}

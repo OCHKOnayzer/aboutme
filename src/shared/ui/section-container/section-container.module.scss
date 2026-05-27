@@ -1,0 +1,10 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+
+  @include container-x-padding;
+}

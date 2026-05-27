@@ -1,0 +1,47 @@
+@use "@/shared/styles/tokens" as *;
+@use "@/shared/styles/mixins" as *;
+
+.button {
+  height: $control-height;
+  padding: 0 $spacing-xl;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+
+  @include interactive-transition;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.primary {
+  background: $color-primary;
+  color: $color-surface;
+
+  &:hover:not(:disabled) {
+    background: $color-primary-hover;
+  }
+
+  &:disabled {
+    background: $color-primary-disabled;
+  }
+}
+
+.secondary {
+  border: 1px solid $color-border-secondary;
+  background: $color-surface-soft;
+  color: $color-text;
+
+  &:hover:not(:disabled) {
+    border-color: $color-primary;
+  }
+
+  &:disabled {
+    color: $color-text-soft;
+  }
+}

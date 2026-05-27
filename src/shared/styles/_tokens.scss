@@ -1,0 +1,83 @@
+$color-background: #f6f7f2;
+$color-foreground: #1d241f;
+$color-surface: #ffffff;
+$color-surface-muted: #fbfcf8;
+$color-surface-soft: #f8faf5;
+$color-surface-accent: #f3f8ef;
+$color-contact-bg: #eaf0e5;
+
+$color-primary: #1f5b3a;
+$color-primary-hover: #17462c;
+$color-primary-soft: #dce8d5;
+$color-primary-disabled: #8da796;
+
+$color-text-strong: #172019;
+$color-text: #243128;
+$color-text-muted: #536055;
+$color-text-soft: #788376;
+$color-text-body: #3d463f;
+$color-text-link: #36443a;
+$color-text-footer: #35443a;
+
+$color-border: #d9ded4;
+$color-border-muted: #e0e5dc;
+$color-border-soft: #e4e8e0;
+$color-border-input: #cfd7ca;
+$color-border-focus: $color-primary;
+$color-border-error: #d39a8c;
+$color-border-success: #a7c7aa;
+$color-border-secondary: #93a08f;
+$color-border-chip: #b9c8b7;
+$color-border-link: #9aa79a;
+$color-border-profile: #e3e7df;
+$color-border-profile-card: #d3d9cf;
+$color-border-ai: #cfe0c8;
+$color-border-contact-card: #cfd9cb;
+
+$color-success-bg: #edf7ee;
+$color-success-text: #24502d;
+$color-error-bg: #fff1ed;
+$color-error-text: #823825;
+$color-selection-bg: #cfe6c7;
+
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-2xl: 28px;
+$spacing-3xl: 32px;
+$spacing-4xl: 36px;
+$layout-gap: 40px;
+$hero-gap: 48px;
+$section-padding-y-compact: 72px;
+$section-padding-y: 80px;
+
+$container-max-width: 1280px;
+$control-height: 48px;
+$field-error-height: 20px;
+$textarea-min-height: 128px;
+
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 40px;
+$font-size-hero-md: 60px;
+$font-size-hero-lg: 72px;
+
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+$line-height-tight: 1.25;
+$line-height-relaxed: 1.75;
+
+$breakpoint-sm: 640px;
+$breakpoint-lg: 1024px;
+
+$transition-base: 0.2s ease;
+$shadow-card: 0 20px 55px rgba(31, 55, 37, 0.1);
+$shadow-profile: 0 24px 70px rgba(31, 55, 37, 0.12);
